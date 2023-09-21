@@ -24,8 +24,10 @@ const Slide = () => {
     }
 
     useEffect(()=>{
-        console.log("랜더링");
-        setTimeout(nextSlider,5000)
+        const interval = setInterval(nextSlider,5000);
+        return (()=>{
+            clearInterval(interval);
+        });
     },[currentIndex]);
   return (
     <div className='max-w-[1540px] h-[500px] w-full m-auto py-4 px-4 relative group'>
