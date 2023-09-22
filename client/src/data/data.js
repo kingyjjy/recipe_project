@@ -373,5 +373,68 @@ export const recipeData = [
         category:"한식"
     }
 
-]
+];
+
+export const category = [
+    {
+        id:1,
+        name:"Burger",
+        img:"images/icon/001.png"
+    },
+    {
+        id:2,
+        name:"Pizza",
+        img:"images/icon/002.png"
+    },
+    {
+        id:3,
+        name:"돈까스",
+        img:"images/icon/003.png"
+    },
+    {
+        id:4,
+        name:"중식",
+        img:"images/icon/004.png"
+    },
+    {
+        id:5,
+        name:"일식",
+        img:"images/icon/005.png"
+    },
+    {
+        id:6,
+        name:"양식",
+        img:"images/icon/006.png"
+    },
+    {
+        id:7,
+        name:"분식",
+        img:"images/icon/007.png"
+    },
+    {
+        id:8,
+        name:"족발/보쌈",
+        img:"images/icon/008.png"
+    },
+    {
+        id:9,
+        name:"한식",
+        img:"images/icon/009.png"
+    },
+    {
+        id:10,
+        name:"브런치",
+        img:"images/icon/010.png"
+    },
+    {
+        id:11,
+        name:"디저트",
+        img:"images/icon/013.png"
+    },
+    {
+        id:12,
+        name:"고기",
+        img:"images/icon/012.png"
+    },
+];
 

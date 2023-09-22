@@ -1,6 +1,5 @@
 import React, {useState} from 'react'
-import { HiArrowSmDown } from 'react-icons/hi' 
-import {BsHeartFill,BsCart4,BsCardList} from 'react-icons/bs'
+import RecipeCard from '../card/RecipeCard';
 import { recipeData } from '../data/data'
 
 
@@ -30,19 +29,8 @@ const Recipe = () => {
         </div>
         <div className="grid md:grid-cols-2 sm:grid-cols-1 lg:grid-cols-4 gap-6 py-4">
             {foods.map((item)=>(    
-                <div key={item.id} className='group border-none hover:scale-105 duration-300 transition-all relative overflow-hidden '>
-                    <img src={item.img} alt={item.title} className='w-full h-[200px] object-cover rounded-lg transition-all duration-300 hover:brightness-50'/>
-                    <a href='#' className="bg-white bg-opacity-75 rounded-full border-orange-700 w-[40px] h-[40px] flex justify-center items-center text-red-600 text-xl absolute top-4 right-4">
-                        <BsHeartFill/>
-                    </a>
-                    <div className="absolute bg-black text-white py-5 px-5 w-full left-0 -right-0 -top-20 bg-opacity-0 group-hover:bg-opacity-70 group-hover:left-10 group-hover:right-10 group-hover:top-10 h-2/5 rounded-lg transition-all duration-500">
-                        <button type='button' className='bg-white text-black w-[70px] h-[40px] text-center'><BsCart4/></button>
-                        <button type='button'><BsCardList/></button>
-                    </div>
-                    <div className="flex pt-2 pb-6 px-2">
-                        <p className="font-bold">{item.title}</p>
-                    </div>
-                </div>
+                
+                <RecipeCard key={item.id} title={item.title} img={item.img} pirce={item.price.toLocaleString()}/>
                 
             ))}
         </div>
