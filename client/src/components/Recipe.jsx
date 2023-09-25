@@ -30,7 +30,7 @@ const Recipe = () => {
         <div className="grid md:grid-cols-2 sm:grid-cols-1 lg:grid-cols-4 gap-6 py-4">
             {foods.map((item)=>(    
                 
-                <RecipeCard key={item.id} title={item.title} img={item.img} pirce={item.price.toLocaleString()}/>
+                <RecipeCard key={item.id} id={item.id} title={item.title} img={item.img} pirce={item.price}/>
                 
             ))}
         </div>

@@ -1,6 +1,7 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 import { HiArrowSmDown,HiArrowSmRight } from 'react-icons/hi' 
-import {BsHeartFill,BsCart4,BsFillRocketTakeoffFill} from 'react-icons/bs'
+import {BsHeartFill,BsCart4,BsFillBookFill} from 'react-icons/bs'
 
 const RecipeCard = (props) => {
     
@@ -8,9 +9,9 @@ const RecipeCard = (props) => {
     
     <div key={props.id} className='group border-none hover:scale-105 duration-300 transition-all relative overflow-hidden '>
                     <img src={props.img} alt={props.title} className='w-full h-[200px] object-cover rounded-lg transition-all duration-300 hover:brightness-50'/>
-                    <a href='#' className="bg-white bg-opacity-75 rounded-full border-orange-700 w-[40px] h-[40px] flex justify-center items-center text-red-600 text-xl absolute top-4 right-4">
+                    <Link to='Detail' className="bg-white bg-opacity-75 rounded-full border-orange-700 w-[40px] h-[40px] flex justify-center items-center text-red-600 text-xl absolute top-4 right-4">
                         <BsHeartFill/>
-                    </a>
+                    </Link>
                     <div className="
                           absolute                           
                           bg-black
@@ -21,7 +22,7 @@ const RecipeCard = (props) => {
                           -translate-x-1/2
                           bg-opacity-0
                           group-hover:bg-opacity-70
-                          group-hover:top-9
+                          group-hover:top-12
                           h-7/12
                           w-9/12
                           rounded-lg
@@ -30,17 +31,17 @@ const RecipeCard = (props) => {
                     <p className="text-center bold">
                       {props.price}원
                     </p>
-                    <div className="py-2 text-center flex justify-between color-white text-xl">
+                    {/* <div className="py-2 text-center flex justify-between color-white text-xl">
                        <a href="#">내용보기</a>
                        <a href="#"><HiArrowSmRight /></a>
-                    </div>
+                    </div> */}
                     <div className="flex m-auto w-w-11/12 justify-between">
                         <button className="bg-orange-500 hover:bg-orange-700 font-bold text-2xl py-2 px-4 rounded">
                         <BsCart4 />
                         </button>
-                        <button className="bg-orange-500 hover:bg-orange-700 font-bold text-2xl py-2 px-4 rounded">
-                        <BsFillRocketTakeoffFill/>
-                        </button>                        
+                        <Link to={`detail/${props.id}`} className="bg-orange-500 hover:bg-orange-700 font-bold text-2xl py-2 px-4 rounded">
+                        <BsFillBookFill/>
+                        </Link>                        
                     </div>
                  </div>
                     <div className="flex pt-2 pb-6 px-2">
